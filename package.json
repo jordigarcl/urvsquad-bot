@@ -1,7 +1,7 @@
 {
   "name": "urvsquad-bot",
   "version": "1.0.0",
-  "description": "My multi-functional Telegram bot to use in friend groups",
+  "description": "A useful Telegram bot to use in friends groups",
   "author": "JordiGarcL",
   "license": "MIT",
   "dependencies": {

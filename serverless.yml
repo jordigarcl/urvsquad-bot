@@ -8,10 +8,14 @@ provider:
     USB_TELEGRAM_BOT_TOKEN: ${env:USB_TELEGRAM_BOT_TOKEN}
 
 functions:
-  hello:
+  donation-fundraiser-countMessages:
     handler: src/donation-raiser/countMessages.handler
     events:
-      - schedule: rate(8 hours)
+      - schedule: cron(0 */8 * * ? *)
+  donation-fundraiser-postUpdateMessage:
+    handler: src/donation-raiser/postUpdateMessage.handler
+    events:
+      - schedule: cron(0 12 * * ? *)
 
 plugins:
   - serverless-offline

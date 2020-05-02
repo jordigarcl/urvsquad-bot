@@ -3,8 +3,8 @@
 const telegramConfig = {
 	botToken: process.env.USB_TELEGRAM_BOT_TOKEN,
 	donationRaiser: {
-		channelId: -394787604
-		// channelId: -1001178690114 //  Test
+		channelId: -1001178690114
+		// channelId: -445605234 //  Test
 	}
 } 
 

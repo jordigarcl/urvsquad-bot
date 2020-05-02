@@ -19,9 +19,10 @@ const countMessagesByUsername = (updates) => {
 
 // Filters those updates that represent messages sent in a certain channel
 function doesUpdateCount(update) {
-  let isMessage = "message" in update
-  let isFromDesiredChannel = telegramConfig.donationRaiser.channelId
-  return isMessage && isFromDesiredChannel
+	if ("message" in update) {
+		return (update.message.chat.id == telegramConfig.donationRaiser.channelId)
+	}
+	return false
 }
 
 // Reducer function that creates a map with the frequency of each item

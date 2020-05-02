@@ -12,6 +12,13 @@ const getUpdates = async (lastUpdateId) =>
 		}
 	})
 
+const sendMessage = async (chat_id, text) => 
+	axios.post(ROOT_URL + '/sendMessage', {
+		chat_id: chat_id,
+		text: text,
+		parse_mode: 'HTML'
+	})
+
 module.exports = {
-	getUpdates
+	getUpdates, sendMessage
 }
