@@ -7,7 +7,7 @@ const calculateRaisedMoney = (moneyRaised, messagesByUsername) => {
 	for (let [username, numberOfMessages] of Object.entries(messagesByUsername)) {
 		let index = moneyRaised.findIndex((item) => item.username == username)
 		if (index >= 0) {
-			moneyRaised[index].amount += numberOfMessages
+			moneyRaised[index].amount += Math.floor(numberOfMessages / 5)
 		}
 	}
 
