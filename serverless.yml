@@ -15,7 +15,7 @@ functions:
   donation-fundraiser-postUpdateMessage:
     handler: src/donation-raiser/postUpdateMessage.handler
     events:
-      - schedule: cron(0 12 * * ? *)
+      - schedule: cron(0 9 * * ? *)
 
 plugins:
   - serverless-offline
